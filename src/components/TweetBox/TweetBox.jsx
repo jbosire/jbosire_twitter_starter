@@ -3,25 +3,32 @@ import TweetInput from "./TweetInput"
 import "./TweetBox.css"
 
 export default function TweetBox(props) {
+  const handleOnTweetTextChange = (event) => {
+    props.setTweetText(event.target.value);
+
+  }
  
 
   const handleOnSubmit = () => {
     var newTweet = {
       name: props.userProfile.name,
       handle: props.userProfile.handle,
-      text: "",
+      text: props.tweetText,
       comments: 0,
       retweets: 0,
       likes: 0,
       id: props.tweets.length,
     }
 
+    props.setTweetText("");
+    props.userProfile.numTweets = props.userProfile.numTweets + 1;
+
     props.setTweets(props.tweets.concat(newTweet));
   }
 
   return (
     <div className="tweet-box">
-      <TweetInput />
+      <TweetInput value={props.tweetText} handleOnChange={handleOnTweetTextChange}/>
 
       <div className="tweet-box-footer">
         <TweetBoxIcons />
