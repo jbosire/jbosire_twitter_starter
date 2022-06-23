@@ -3,6 +3,8 @@ export const codepathUserProfile = {
   handle: "codepath",
   numTweets: 1299,
   numFollowers: 2500000,
+  numFollowing: 1000000,
+  profilePicture: "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/wfsonfv0p92plryzwijf"
 }
 
 export const firstTweet = {

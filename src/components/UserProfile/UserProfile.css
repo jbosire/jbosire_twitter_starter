@@ -77,3 +77,15 @@
     display: none;
   }
 }
+
+.profPic{
+ width:2.0cm;
+ height: 2.0cm;
+  border-radius: 50%;
+  
+  border: solid 3px white;
+  margin-left: 10px;
+  transform: translate(-33px);
+  transform: translateY(-33px);
+ 
+}

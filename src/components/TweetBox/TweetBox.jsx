@@ -20,16 +20,6 @@ export default function TweetBox(props) {
       id: props.tweets.length,
     };
 
-    //   console.log(props);
-    //  console.log(props.setUserProfile);
-    // console.log(newProfile);
-
-    /*   props.setUserProfile({
-      name: props.userProfile.name,
-      handle: props.userProfile.handle,
-      numTweets: tweetNum,
-      numFollowers: props.userProfile.numFollowers,
-    });*/
 
     props.setTweets(props.tweets.concat(newTweet));
     props.setTweetText("");
